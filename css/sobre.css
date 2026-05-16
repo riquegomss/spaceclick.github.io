@@ -248,3 +248,27 @@ body {
     color: #00bfff;
     border-color: #00bfff;
 }
+
+/* Botão Faça Parte da nossa equipe */
+.btn-equipe {
+    display: inline-block;
+    background: #00bfff;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: 2px solid #00bfff;
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.4);
+    font-family: sans-serif;
+    margin-top: 20px;
+}
+
+.btn-equipe:hover {
+    background: transparent;
+    color: #00bfff;
+    box-shadow: 0 0 25px rgba(0, 191, 255, 0.8);
+    transform: translateY(-3px);
+}

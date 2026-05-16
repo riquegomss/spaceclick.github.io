@@ -23,6 +23,7 @@
             font-weight: 600;
             letter-spacing: 1px;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            text-align: center;
         }
 
         .sol-lateral {
@@ -84,6 +85,10 @@
             }
         }
 
+        .foguete-wrapper {
+            display: inline-block;
+        }
+
         .foguete-img {
             max-width: 100%;
             border-radius: 10px;
@@ -91,7 +96,7 @@
             transition: filter 0.3s ease, transform 0.3s ease;
         }
 
-        .mapa-container:hover .foguete-img {
+        .foguete-wrapper:hover .foguete-img {
             animation-play-state: paused;
             transform: scale(1.05);
             filter: drop-shadow(0 10px 20px rgba(255, 255, 255, 0.2));
@@ -100,7 +105,6 @@
 </head>
 
 <body>
-
 
     <div class="menu-btn" onclick="abrirMenu()">☰</div>
 
@@ -112,9 +116,13 @@
     </div>
 
     <main>
+
         <h1>Explore o Sistema Solar</h1>
+
         <br><br><br><br>
+
         <div class="sistema" style="text-align: center;">
+
             <figure style="display: inline-block; vertical-align: middle;">
                 <img src="./images/SOL EM HD.png" class="sol-lateral"
                     onclick="mostrarInfo('Sol: A estrela no centro do Sistema Solar ☀️')">
@@ -167,6 +175,7 @@
                     style="width:85px" onclick="mostrarInfo('Netuno: O mais distante 🌊')">
                 <figcaption>Netuno</figcaption>
             </figure>
+
         </div>
 
         <div style="text-align: center;">
@@ -176,15 +185,19 @@
         </div>
 
         <div class="mapa-container">
-            <h2>Explore nossa loja </h2>
-            <img src="./images/cliqueloja.png" alt="Foguete Interativo" width="400" height="400" usemap="#foguete-map"
-                class="foguete-img">
 
-            <map name="foguete-map">
-                <area shape="poly"
-                    coords="427,42,374,45,305,71,249,109,201,158,139,163,99,194,64,247,67,260,91,256,138,223,156,229,133,285,110,290,93,310,92,339,106,366,79,403,66,459,112,446,156,409,190,420,218,413,234,398,239,375,278,350,288,377,254,426,259,445,269,446,331,394,352,348,351,289,398,227,431,158,439,80"
-                    alt="Loja" href="./pages/lo" title="Ir para a Loja">
-            </map>
+            <h2>Explore nossa loja</h2>
+
+            <div class="foguete-wrapper">
+                <img src="./images/cliqueloja.png" alt="Foguete Interativo" width="400" height="400"
+                    usemap="#foguete-map" class="foguete-img">
+
+                <map name="foguete-map">
+                    <area shape="rect" coords="0,0,400,400" alt="Loja" href="./pages/lojinha.html"
+                        title="Ir para a Loja">
+                </map>
+            </div>
+
         </div>
 
     </main>
@@ -198,7 +211,7 @@
             document.getElementById("info").innerText = texto;
         }
 
-        function abrirMenu(Menu) {
+        function abrirMenu() {
             document.getElementById("sidebar").classList.toggle("active");
         }
     </script>
