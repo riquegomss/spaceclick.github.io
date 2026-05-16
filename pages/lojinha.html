@@ -33,7 +33,8 @@
             </figure>
             <div class="info">
                 <h2>Mercúrio</h2>
-                <p class="descricao">O menor planeta do sistema solar e o mais próximo do Sol. Um mundo rochoso e extremo.</p>
+                <p class="descricao">O menor planeta do sistema solar e o mais próximo do Sol. Um mundo rochoso e
+                    extremo.</p>
                 <p class="preco">$</p>
                 <button class="btn-comprar">Comprar</button>
             </div>
@@ -46,7 +47,8 @@
             </figure>
             <div class="info">
                 <h2>Vênus</h2>
-                <p class="descricao">O planeta mais quente do sistema solar, coberto por nuvens espessas e brilhantes.</p>
+                <p class="descricao">O planeta mais quente do sistema solar, coberto por nuvens espessas e brilhantes.
+                </p>
                 <p class="preco">$</p>
                 <button class="btn-comprar">Comprar</button>
             </div>
@@ -72,7 +74,8 @@
             </figure>
             <div class="info">
                 <h2>Marte</h2>
-                <p class="descricao">O planeta vermelho. Famoso por seus desertos de poeira e o gigante Monte Olimpo.</p>
+                <p class="descricao">O planeta vermelho. Famoso por seus desertos de poeira e o gigante Monte Olimpo.
+                </p>
                 <p class="preco">$</p>
                 <button class="btn-comprar">Comprar</button>
             </div>
@@ -98,7 +101,22 @@
             </figure>
             <div class="info">
                 <h2>Saturno</h2>
-                <p class="descricao">A joia do sistema solar, famosa por seu espetacular e complexo sistema de anéis.</p>
+                <p class="descricao">A joia do sistema solar, famosa por seu espetacular e complexo sistema de anéis.
+                </p>
+                <p class="preco">$</p>
+                <button class="btn-comprar">Comprar</button>
+            </div>
+        </div>
+
+        <!-- NETUNO -->
+        <div class="card-produto">
+            <figure class="imagem-produto">
+                <img src="../images/imagensloja/netuno (1).png" alt="Netuno">
+            </figure>
+            <div class="info">
+                <h2>Netuno</h2>
+                <p class="descricao">A joia do sistema solar, famosa por seu espetacular e complexo sistema de anéis.
+                </p>
                 <p class="preco">$</p>
                 <button class="btn-comprar">Comprar</button>
             </div>
@@ -111,7 +129,7 @@
             document.getElementById("sidebar").classList.toggle("active");
         }
 
-        window.onclick = function(event) {
+        window.onclick = function (event) {
             var sidebar = document.getElementById("sidebar");
             var btn = document.querySelector(".menu-btn");
             if (event.target !== sidebar && event.target !== btn && sidebar.classList.contains("active")) {

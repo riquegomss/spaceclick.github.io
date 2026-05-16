@@ -8,29 +8,24 @@
     <title>SPACE CLICK</title>
 
     <link rel="stylesheet" href="./css/index.css">
-
-
 </head>
 
 <body>
+
 
     <div class="menu-btn" onclick="abrirMenu()">☰</div>
 
     <div class="sidebar" id="sidebar">
         <a href="./pages/lojinha.html">Loja 🛒</a>
         <a href="./pages/infoplanetas.html">Informações Planetas</a>
-        <a href="../pages/formulario.html">Faça parte da equipe</a>
+        <a href="./pages/formulario.html">Faça parte da equipe</a>
         <a href="./pages/sobre.html">Sobre</a>
     </div>
 
     <main>
-
         <h1>Explore o Sistema Solar</h1>
-
         <br><br><br><br>
-
         <div class="sistema" style="text-align: center;">
-
             <figure style="display: inline-block; vertical-align: middle;">
                 <img src="./images/SOL EM HD.png" class="sol-lateral"
                     onclick="mostrarInfo('Sol: A estrela no centro do Sistema Solar ☀️')">
@@ -83,7 +78,6 @@
                     style="width:85px" onclick="mostrarInfo('Netuno: O mais distante 🌊')">
                 <figcaption>Netuno</figcaption>
             </figure>
-
         </div>
 
         <div style="text-align: center;">
@@ -93,19 +87,15 @@
         </div>
 
         <div class="mapa-container">
-
-            <h2>Explore nossa loja</h2>
-
+            <h2>Explore nossa loja </h2>
             <div class="foguete-wrapper">
-                <img src="./images/cliqueloja.png" alt="Foguete Interativo" width="400" height="400"
-                    usemap="#foguete-map" class="foguete-img">
+                <img src="images/cliqueloja.png" alt="Foguete Interativo" width="400" height="400" usemap="#foguete-map"
+                    class="foguete-img">
 
                 <map name="foguete-map">
-                    <area shape="rect" coords="0,0,400,400" alt="Loja" href="./pages/lojinha.html"
-                        title="Ir para a Loja">
+                    <area shape="rect" coords="0,0,400,400" alt="Loja" href="pages/lojinha.html" title="Ir para a Loja">
                 </map>
             </div>
-
         </div>
 
     </main>
@@ -119,7 +109,7 @@
             document.getElementById("info").innerText = texto;
         }
 
-        function abrirMenu() {
+        function abrirMenu(Menu) {
             document.getElementById("sidebar").classList.toggle("active");
         }
     </script>
