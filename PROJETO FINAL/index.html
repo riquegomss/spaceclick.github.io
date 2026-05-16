@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/GALAXIA ICON.png">
+    <title>SPACE CLICK</title>
+
+    <link rel="stylesheet" href="./css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+            background-color: #050505;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1,
+        h2 {
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .sol-lateral {
+            cursor: pointer;
+            filter: drop-shadow(0 0 40px rgba(255, 100, 0, 0.4));
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .planeta {
+            cursor: pointer;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .planeta:hover {
+            transform: scale(1.15);
+        }
+
+        figcaption {
+            font-weight: 300;
+            font-size: 0.9rem;
+            color: #cccccc;
+            margin-top: 5px;
+        }
+
+        .info {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 15px 30px;
+            margin: 20px auto;
+            font-weight: 400;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            min-width: 300px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .mapa-container {
+            margin-top: 50px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        @keyframes flutuar {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .foguete-img {
+            max-width: 100%;
+            border-radius: 10px;
+            animation: flutuar 3s ease-in-out infinite;
+            transition: filter 0.3s ease, transform 0.3s ease;
+        }
+
+        .mapa-container:hover .foguete-img {
+            animation-play-state: paused;
+            transform: scale(1.05);
+            filter: drop-shadow(0 10px 20px rgba(255, 255, 255, 0.2));
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="menu-btn" onclick="abrirMenu()">☰</div>
+
+    <div class="sidebar" id="sidebar">
+        <a href="/index.html">Home</a>
+        <a href="pages/pagina01.html">Informações Planetas</a>
+        <a href="pages/sobre.html">Sobre</a>
+    </div>
+
+    <main>
+        <h1>Explore o Sistema Solar</h1>
+        <br><br><br><br>
+        <div class="sistema" style="text-align: center;">
+            <figure style="display: inline-block; vertical-align: middle;">
+                <img src="/images/SOL EM HD.png" class="sol-lateral"
+                    onclick="mostrarInfo('Sol: A estrela no centro do Sistema Solar ☀️')">
+            </figure>
+
+            <figure style="display: inline-block; vertical-align: middle; margin: 0 10px;">
+                <img src="./images/MERCURIO IMAGEM.jpg" class="planeta" style="width:40px"
+                    onclick="mostrarInfo('Mercúrio: O menor planeta ☀️')">
+                <figcaption>Mercúrio</figcaption>
+            </figure>
+
+            <figure style="display: inline-block; vertical-align: middle; margin: 0 10px;">
+                <img src="./images/VENUS IMAGEM.jpg" class="planeta" style="width:70px"
+                    onclick="mostrarInfo('Vênus: O planeta mais quente 🔥')">
+                <figcaption>Vênus</figcaption>
+            </figure>
+
+            <figure style="display: inline-block; vertical-align: middle; margin: 0 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg"
+                    class="planeta" style="width:75px" onclick="mostrarInfo('Terra: Nosso planeta 🌍')">
+                <figcaption>Terra</figcaption>
+            </figure>
+
+            <figure style="display: inline-block; vertical-align: middle; margin: 0 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg"
+                    class="planeta" style="width:55px" onclick="mostrarInfo('Marte: O planeta vermelho 🔴')">
+                <figcaption>Marte</figcaption>
+            </figure>
+
+            <figure style="display: inline-block; vertical-align: middle; margin: 0 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Jupiter.jpg" class="planeta"
+                    style="width:140px" onclick="mostrarInfo('Júpiter: O maior planeta 🟠')">
+                <figcaption>Júpiter</figcaption>
+            </figure>
+
+            <figure style="display: inline-block; vertical-align: middle; margin: 0 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Saturn_Storm.jpg" class="planeta"
+                    style="width:130px" onclick="mostrarInfo('Saturno: O planeta dos anéis 💍')">
+                <figcaption>Saturno</figcaption>
+            </figure>
+
+            <figure style="display: inline-block; vertical-align: middle; margin: 0 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg" class="planeta"
+                    style="width:90px" onclick="mostrarInfo('Urano: Um planeta gelado ❄️')">
+                <figcaption>Urano</figcaption>
+            </figure>
+
+            <figure style="display: inline-block; vertical-align: middle; margin: 0 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Neptune_Full.jpg" class="planeta"
+                    style="width:85px" onclick="mostrarInfo('Netuno: O mais distante 🌊')">
+                <figcaption>Netuno</figcaption>
+            </figure>
+        </div>
+
+        <div style="text-align: center;">
+            <div class="info" id="info">
+                Clique em um planeta para ver informações
+            </div>
+        </div>
+
+        <div class="mapa-container">
+            <h2>Explore nossa loja </h2>
+            <img src="images/cliqueloja.png" alt="Foguete Interativo" width="400" height="400" usemap="#foguete-map"
+                class="foguete-img">
+
+            <map name="foguete-map">
+                <area shape="poly"
+                    coords="427,42,374,45,305,71,249,109,201,158,139,163,99,194,64,247,67,260,91,256,138,223,156,229,133,285,110,290,93,310,92,339,106,366,79,403,66,459,112,446,156,409,190,420,218,413,234,398,239,375,278,350,288,377,254,426,259,445,269,446,331,394,352,348,351,289,398,227,431,158,439,80"
+                    alt="Loja" href="pages/pagina02.html" title="Ir para a Loja">
+            </map>
+        </div>
+
+    </main>
+
+    <footer style="text-align: center; margin-top: 50px; font-weight: 300; font-size: 0.8rem; color: #888;">
+        © 2026 - Projeto Sistema Solar
+    </footer>
+
+    <script>
+        function mostrarInfo(texto) {
+            document.getElementById("info").innerText = texto;
+        }
+
+        function abrirMenu(Menu) {
+            document.getElementById("sidebar").classList.toggle("active");
+        }
+    </script>
+
+</body>
+
+</html>

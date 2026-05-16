@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/GALAXIA-ICON.png">
+    <title>LANDING PAGE</title>
+</head>
+
+<body>
+    <html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Cálculo</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1>Peso em outros planetas</h1>
+        <input type="number" id="peso" placeholder="Digite seu peso">
+        <button onclick="calc()">Calcular</button>
+        <p id="res"></p>
+        <script>
+            function calc() {
+                let p = document.getElementById('peso').value;
+                let r = `Marte: ${p * 0.38}kg | Júpiter: ${p * 2.34}kg`;
+                document.getElementById('res').innerText = r;
+            }
+        </script>
+    </body>
+
+    </html>
+</body>
+
+</html>

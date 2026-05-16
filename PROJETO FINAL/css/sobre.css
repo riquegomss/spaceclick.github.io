@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    background:
+        radial-gradient(1px 1px at 10% 20%, white, transparent),
+        radial-gradient(2px 2px at 20% 80%, white, transparent),
+        radial-gradient(1px 1px at 30% 40%, white, transparent),
+        radial-gradient(2px 2px at 40% 60%, white, transparent),
+        radial-gradient(1px 1px at 50% 30%, white, transparent),
+        radial-gradient(2px 2px at 60% 70%, white, transparent),
+        radial-gradient(1px 1px at 70% 20%, white, transparent),
+        radial-gradient(2px 2px at 80% 50%, white, transparent),
+        radial-gradient(1px 1px at 90% 90%, white, transparent),
+        radial-gradient(2px 2px at 15% 60%, white, transparent),
+        radial-gradient(1px 1px at 25% 10%, white, transparent),
+        radial-gradient(2px 2px at 35% 85%, white, transparent),
+        radial-gradient(1px 1px at 45% 55%, white, transparent),
+        radial-gradient(2px 2px at 55% 15%, white, transparent),
+        radial-gradient(1px 1px at 65% 75%, white, transparent),
+        radial-gradient(2px 2px at 75% 35%, white, transparent),
+        radial-gradient(1px 1px at 85% 65%, white, transparent),
+        radial-gradient(2px 2px at 95% 25%, white, transparent);
+
+    background-repeat: repeat;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+body {
+    min-height: 100vh;
+    font-family: sans-serif;
+    background: #000000;
+    color: #ffffff;
+    /* Garante texto claro no corpo da página */
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* MENU HAMBURGUER */
+.menu-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+    background: #00bfff;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: rgba(12, 18, 35, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 18px 25px;
+    transition: background 0.3s;
+}
+
+.sidebar a:hover {
+    background: #00ccff;
+}
+
+.team {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 25px;
+}
+
+.title-box {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.mini-title {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #00bfff;
+    /* Azul neon fixo */
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.title-box h1 {
+    font-family: sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    /* Cor branca para o título principal */
+}
+
+.title-box p {
+    color: #cccccc;
+    /* Cinza claro para leitura confortável */
+    font-size: 1rem;
+    max-width: 700px;
+    line-height: 1.7;
+}
+
+.cards-container {
+    width: 100%;
+    max-width: 1600px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+    /* Corrigido conflito com flex-wrap */
+    gap: 28px;
+}
+
+.card {
+    width: 250px;
+    background: rgba(255, 255, 255, 0.03);
+    /* Fundo sutil para o card de vidro */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* Borda fina */
+    border-radius: 24px;
+    padding: 35px 25px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(14px);
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+/* Hover criado por joao */
+.card:hover {
+    transform: translateY(-12px);
+    border-color: #00bfff;
+    /* Destaca a borda no hover */
+    box-shadow: 0 10px 30px rgba(0, 191, 255, 0.2);
+    /* Sombra neon azul */
+}
+
+.image-box {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 22px;
+    border-radius: 50%;
+    padding: 4px;
+    box-shadow: 0 0 18px rgba(0, 191, 255, 0.35);
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+.card h2 {
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+    /* Cor branca para o nome no card */
+}
+
+.role {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #00bfff;
+    font-size: 0.92rem;
+    font-weight: 500;
+}
+
+.role.purple {
+    color: #a855f7;
+    /* Roxo fixo */
+}
+
+.role.pink {
+    color: #f43f5e;
+    /* Rosa fixo */
+}
+
+.card p {
+    color: #cccccc;
+    font-size: 0.94rem;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+}
+
+.socials a {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #ffffff;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.socials a:hover {
+    transform: translateY(-4px) scale(1.08);
+    color: #00bfff;
+    border-color: #00bfff;
+}
