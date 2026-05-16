@@ -273,3 +273,96 @@ footer {
     margin: 0 auto;
     padding: 0 1rem;
 }
+
+/* --- ESTILOS MOVIDOS DO HTML --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    background-color: #050505;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2 {
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.sol-lateral {
+    cursor: pointer;
+    filter: drop-shadow(0 0 40px rgba(255, 100, 0, 0.4));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.planeta {
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.planeta:hover {
+    transform: scale(1.15);
+}
+
+figcaption {
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: #cccccc;
+    margin-top: 5px;
+}
+
+.info {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 15px 30px;
+    margin: 20px auto;
+    font-weight: 400;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    min-width: 300px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mapa-container {
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.foguete-wrapper {
+    display: inline-block;
+}
+
+.foguete-img {
+    max-width: 100%;
+    border-radius: 10px;
+    animation: flutuar 3s ease-in-out infinite;
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.foguete-wrapper:hover .foguete-img {
+    animation-play-state: paused;
+    transform: scale(1.05);
+    filter: drop-shadow(0 10px 20px rgba(255, 255, 255, 0.2));
+}
