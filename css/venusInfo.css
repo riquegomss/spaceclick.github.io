@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    background: black;
+    background-image: url(../images/imagesInfoPlanetas/VenusInfoPlaneta.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+main {
+    padding: 20px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+footer {
+    background: #111;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.btn-voltar {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+
+    background: #00bfff;
+    color: white;
+
+    border: none;
+    border-radius: 12px;
+
+    padding: 12px 20px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 0 15px rgba(79, 70, 229, 0.5);
+
+    transition: all 0.3s ease;
+}
+
+.btn-voltar:hover {
+    background: #00bfff;
+    transform: translateY(-2px);
+}
+
+
+.info-planeta {
+    width: 800px;
+    max-width: 90%;
+
+    margin: 50px auto;
+    padding: 40px;
+
+    background-color: #111827;
+
+    border: 3px solid #4f46e5;
+
+    border-radius: 25px;
+
+    box-shadow: 0 0 25px rgba(79, 70, 229, 0.5);
+
+    text-align: justify;
+}
+
+.info-planeta h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.info-planeta p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
