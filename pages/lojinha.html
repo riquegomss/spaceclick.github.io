@@ -22,6 +22,11 @@
         <a href="./sobre.html">Sobre</a>
         <a href="../pages/landingPage.html">Landing Page</a>
     </div>
+    <div class="carrinho-topo">
+        <a href="./carrinho.html">
+            🛒 <span id="contador-carrinho">0</span>
+        </a>
+    </div>
 
     <h1 style="text-align: center; margin-bottom: 40px;">Nossos Planetas</h1>
 
@@ -36,8 +41,9 @@
                 <h2>Mercúrio</h2>
                 <p class="descricao">O menor planeta do sistema solar e o mais próximo do Sol. Um mundo rochoso e
                     extremo.</p>
-                <p class="preco">$</p>
-                <button class="btn-comprar">Comprar</button>
+                <p class="preco">R$ 150,00</p>
+                <button class="btn-comprar" onclick="adicionarCarrinho('Globo Mercúrio')">Comprar
+                </button>
             </div>
         </div>
 
@@ -50,8 +56,10 @@
                 <h2>Vênus</h2>
                 <p class="descricao">O planeta mais quente do sistema solar, coberto por nuvens espessas e brilhantes.
                 </p>
-                <p class="preco">$</p>
-                <button class="btn-comprar">Comprar</button>
+                <p class="preco">R$ 150,00</p>
+                <button class="btn-comprar" onclick="adicionarCarrinho('Globo Vênus')">
+                    Comprar
+                </button>
             </div>
         </div>
 
@@ -63,8 +71,10 @@
             <div class="info">
                 <h2>Terra</h2>
                 <p class="descricao">Nosso lar azul. Único planeta conhecido com água líquida e vida abundante.</p>
-                <p class="preco">$</p>
-                <button class="btn-comprar">Comprar</button>
+                <p class="preco">R$ 150,00</p>
+                <button class="btn-comprar" onclick="adicionarCarrinho('Globo Terra')">
+                    Comprar
+                </button>
             </div>
         </div>
 
@@ -77,8 +87,10 @@
                 <h2>Marte</h2>
                 <p class="descricao">O planeta vermelho. Famoso por seus desertos de poeira e o gigante Monte Olimpo.
                 </p>
-                <p class="preco">$</p>
-                <button class="btn-comprar">Comprar</button>
+                <p class="preco">R$ 150,00</p>
+                <button class="btn-comprar" onclick="adicionarCarrinho('Globo Marte')">
+                    Comprar
+                </button>
             </div>
         </div>
 
@@ -90,8 +102,9 @@
             <div class="info">
                 <h2>Júpiter</h2>
                 <p class="descricao">O gigante gasoso. Tão grande que caberiam mais de mil Terras dentro dele.</p>
-                <p class="preco">$</p>
-                <button class="btn-comprar">Comprar</button>
+                <p class="preco">R$ 150,00</p>
+                <button class="btn-comprar" onclick="adicionarCarrinho('Globo Júpiter')">
+                    Comprar</button>
             </div>
         </div>
 
@@ -104,8 +117,9 @@
                 <h2>Saturno</h2>
                 <p class="descricao">A joia do sistema solar, famosa por seu espetacular e complexo sistema de anéis.
                 </p>
-                <p class="preco">$</p>
-                <button class="btn-comprar">Comprar</button>
+                <p class="preco">R$ 150,00</p>
+                <button class="btn-comprar" onclick="adicionarCarrinho('Globo Saturno')">
+                    Comprar</button>
             </div>
         </div>
 
@@ -118,8 +132,9 @@
                 <h2>Netuno</h2>
                 <p class="descricao">A joia do sistema solar, famosa por seu espetacular e complexo sistema de anéis.
                 </p>
-                <p class="preco">$</p>
-                <button class="btn-comprar">Comprar</button>
+                <p class="preco">R$ 150,00</p>
+                <button class="btn-comprar" onclick="adicionarCarrinho('Globo Netuno')">
+                    Comprar</button>
             </div>
         </div>
 
@@ -137,7 +152,35 @@
                 sidebar.classList.remove("active");
             }
         }
+        function adicionarCarrinho(produto) {
+
+            let carrinho =
+                JSON.parse(localStorage.getItem("carrinho")) || [];
+
+            carrinho.push(produto);
+
+            localStorage.setItem(
+                "carrinho",
+                JSON.stringify(carrinho)
+            );
+
+            atualizarContador();
+
+            alert(produto + " adicionado ao carrinho!");
+        }
+
+        function atualizarContador() {
+
+            let carrinho =
+                JSON.parse(localStorage.getItem("carrinho")) || [];
+
+            document.getElementById("contador-carrinho")
+                .innerText = carrinho.length;
+        }
+
+        window.onload = atualizarContador;
     </script>
+
 
 </body>
 

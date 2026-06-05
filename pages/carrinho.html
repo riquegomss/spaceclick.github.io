@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho Espacial</title>
+
+    <link rel="stylesheet" href="../css/carrinho.css">
+
+</head>
+
+<body>
+
+    <h1>🛒 Carrinho Espacial</h1>
+
+    <div id="lista"></div>
+
+    <div class="acoes">
+
+        <button class="limpar" onclick="limparCarrinho()">
+            Limpar Carrinho
+        </button>
+
+        <br><br>
+
+        <a class="voltar" href="./lojinha.html">
+            Voltar para Loja
+        </a>
+
+    </div>
+
+    <script>
+
+        function carregarCarrinho() {
+
+            let carrinho =
+                JSON.parse(localStorage.getItem("carrinho")) || [];
+
+            let lista =
+                document.getElementById("lista");
+
+            lista.innerHTML = "";
+
+            if (carrinho.length === 0) {
+
+                lista.innerHTML =
+                    "<h2 class='carrinho-vazio'>Seu carrinho está vazio.</h2>";
+
+                return;
+            }
+
+            carrinho.forEach((item, index) => {
+
+                lista.innerHTML += `
+                    <div class="item">
+
+                        <span>${item}</span>
+
+                        <button
+                            class="remover"
+                            onclick="removerItem(${index})">
+                            Remover
+                        </button>
+
+                    </div>
+                `;
+            });
+        }
+
+        function removerItem(index) {
+
+            let carrinho =
+                JSON.parse(localStorage.getItem("carrinho")) || [];
+
+            carrinho.splice(index, 1);
+
+            localStorage.setItem(
+                "carrinho",
+                JSON.stringify(carrinho)
+            );
+
+            carregarCarrinho();
+        }
+
+        function limparCarrinho() {
+
+            localStorage.removeItem("carrinho");
+
+            carregarCarrinho();
+        }
+
+        carregarCarrinho();
+
+    </script>
+
+</body>
+
+</html>
