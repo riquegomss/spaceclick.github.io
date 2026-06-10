@@ -9,10 +9,10 @@ Este website foi criado para auxiliar estudantes e entusiastas da astronomia a c
 
 ## 🎯 Objetivos
 
-- Apresentar informações sobre os planetas do Sistema Solar;
-- Desenvolver uma interface intuitiva e responsiva;
-- Aplicar os conhecimentos adquiridos em HTML, CSS e JavaScript;
-- Promover o aprendizado sobre astronomia por meio da tecnologia.
+Apresentar informações sobre os planetas do Sistema Solar;
+Desenvolver uma interface intuitiva e responsiva;
+Aplicar os conhecimentos adquiridos em HTML, CSS e JavaScript;
+Promover o aprendizado sobre astronomia por meio da tecnologia.
 
 ## 🛠️ Tecnologias Utilizadas
 
