@@ -25,15 +25,9 @@ Este website foi criado para auxiliar estudantes e entusiastas da astronomia a c
 
 - João Vitor Oliveira Ferreira – Tech Lead
 - Leonardo Ferreira Guimarães – Desenvolvedor Front-End
-- Henrique Gomes Soares – Designer Gráfico
+- Henrique Gomes Soares – Desenvolvedor  Front-End, Design Gráfico
 - Pedro Santos Nonaka – Redator de Conteúdo
 - Samuel – Desenvolvedor Front-End
-
-## 🚀 Acesso ao Projeto
-
-Em breve disponível através do GitHub Pages.
-
-## 📚 Disciplina
 
 Introdução à Programação Web
 
