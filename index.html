@@ -21,16 +21,20 @@
         <a href="./pages/formulario.html">Faça parte da equipe</a>
         <a href="./pages/sobre.html">Sobre</a>
         <a href="./pages/landingPage.html">Landing Page</a>
-    </div>  
+    </div>
 
     <main>
         <h1>Explore o Sistema Solar</h1>
         <br><br><br><br>
         <div class="sistema" style="text-align: center;">
-            <figure style="display: inline-block; vertical-align: middle;">
-                <img src="./images/SOL EM HD.png" class="sol-lateral"
-                    onmouseover="mostrarInfo('Sol: A estrela no centro do Sistema Solar ☀️')"
-                    onmouseout="limparInfo()">
+
+
+            <figure>
+                <a href="./pages/solInfo.html">
+                    <img src="./images/SOL EM HD.png" class="sol-lateral"
+                        onmouseover="mostrarInfo('Sol: A estrela no centro do Sistema Solar ☀️')"
+                        onmouseout="limparInfo()">
+                </a>
             </figure>
 
             <figure>
@@ -74,7 +78,7 @@
             </figure>
 
             <figure>
-                <a href="./pages/jupiterInfo.html">
+                <a href="./pages/saturnoInfo.html">
                     <img src="./images/SATURNO.png" class="planeta" style="width:130px"
                         onmouseover="mostrarInfo('Saturno: O planeta dos anéis 💍')" onmouseout="limparInfo()">
                 </a>
@@ -121,6 +125,8 @@
     <footer style="text-align: center; margin-top: 50px; font-weight: 300; font-size: 0.8rem; color: #888;">
         © 2026 ClickSpace — Projeto Acadêmico 1º Semestre - Universidade Fumec
     </footer>
+
+
 
     <script>
         function mostrarInfo(texto) {
