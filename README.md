@@ -1,36 +1,73 @@
-# spaceclick.github.io
+<div align="center">
+
 # 🌌 Sistema Solar
 
-Projeto Final da disciplina de **Introdução à Programação Web**, desenvolvido com o objetivo de apresentar informações sobre o Sistema Solar de forma interativa, educativa e acessível.
+### Projeto Final de Introdução à Programação Web
 
-## 📋 Sobre o Projeto
+Uma plataforma educativa e interativa para explorar os planetas e corpos celestes do Sistema Solar.
 
-Este website foi criado para auxiliar estudantes e entusiastas da astronomia a conhecerem melhor os planetas, satélites naturais e demais corpos celestes que compõem o Sistema Solar.
+🚀 **Acesse o projeto:** https://spaceclick.github.io
 
-## 🎯 Objetivos
+</div>
 
-Apresentar informações sobre os planetas do Sistema Solar;
-Desenvolver uma interface intuitiva e responsiva;
-Aplicar os conhecimentos adquiridos em HTML, CSS e JavaScript;
-Promover o aprendizado sobre astronomia por meio da tecnologia.
+---
+
+## 📖 Sobre
+
+O **Sistema Solar** é um projeto acadêmico desenvolvido para aplicar os conceitos de desenvolvimento web aprendidos durante a disciplina de **Introdução à Programação Web**.
+
+A aplicação apresenta informações sobre os planetas do Sistema Solar de forma visual, intuitiva e acessível, promovendo o aprendizado de astronomia através da tecnologia.
+
+---
+
+## ✨ Funcionalidades
+
+* 🌍 Informações sobre os planetas do Sistema Solar
+* 🌙 Dados sobre satélites naturais
+* 📱 Interface responsiva
+* 🎨 Design moderno e intuitivo
+* ⚡ Navegação simples e dinâmica
+
+---
 
 ## 🛠️ Tecnologias Utilizadas
 
-- HTML5
-- CSS3
-- JavaScript
-- Git e GitHub
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white">
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white">
+</p>
+
+---
 
 ## 👥 Equipe
 
-- João Vitor Oliveira Ferreira – Tech Lead
-- Leonardo Ferreira Guimarães – Desenvolvedor Front-End
-- Henrique Gomes Soares – Desenvolvedor  Front-End, Design Gráfico
-- Pedro Santos Nonaka – Redator de Conteúdo
-- Samuel – Desenvolvedor Front-End
+| Integrante                   | Função                                   |
+| ---------------------------- | ---------------------------------------- |
+| João Vitor Oliveira Ferreira | Tech Lead                                |
+| Leonardo Ferreira Guimarães  | Desenvolvedor Front-End                  |
+| Henrique Gomes Soares        | Desenvolvedor Front-End e Design Gráfico |
+| Pedro Santos Nonaka          | Redator de Conteúdo                      |
+| Samuel Marinho               | Desenvolvedor Front-End                  |
 
-Introdução à Programação Web
+---
+
+## 🎓 Disciplina
+
+**Introdução à Programação Web**
+
+---
 
 ## 📅 Ano
 
 2026
+
+---
+
+<div align="center">
+
+⭐ Desenvolvido como projeto acadêmico para fins educacionais.
+
+</div>
