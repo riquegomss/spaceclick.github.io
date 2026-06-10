@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/GALAXIA-ICON.png">
+    <title>Tabela - Sistema Solar</title>
+    <link rel="stylesheet" href="../css/infoplanetas.css">
+    <link rel="icon" href="../images/GALAXIA ICON.png">
+
+</head>
+
+<div id="viewer" class="viewer">
+    <img id="imgPlaneta" src="">
+</div>
+
+<body>
+
+    <div class="menu-btn" onclick="abrirMenu()">☰</div>
+
+    <div class="sidebar" id="sidebar">
+        <a href="../index.html">Home</a>
+        <a href="./lojinha.html">Loja 🛒</a>    
+        <a href="./landingPage.html">Landing Page</a>
+        <a href="../pages/sobre.html">Sobre</a>
+        <a href="../pages/formulario.html">Faça parte da equipe</a>
+
+    </div>
+
+    <main>
+        <h1>Tabela Informativa Sobre Planetas</h1>
+
+        <table>
+            <tr>
+                <th>Planeta</th>
+                <th>Diâmetro (km)</th>
+                <th>Temperatura Média</th>
+                <th>Quantidade de Luas</th>
+            </tr>
+
+            <tr>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/MERCURIO2.png')">Mercúrio</td>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/MERCURIO2.png')">4.879</td>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/MERCURIO2.png')">167°C</td>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/MERCURIO2.png')">0</td>
+            </tr>
+
+            <tr>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/VENUS2.png')">Vênus</td>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/VENUS2.png')">12.104</td>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/VENUS2.png')">464°C</td>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/VENUS2.png')">0</td>
+            </tr>
+
+            <tr>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/TERRA IMAGEM.jpg')">Terra</td>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/TERRA IMAGEM.jpg')">12.742</td>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/TERRA IMAGEM.jpg')">15°C</td>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/TERRA IMAGEM.jpg')">1</td>
+            </tr>
+
+            <tr>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/MARTE IMAGEM.jpg')">Marte</td>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/MARTE IMAGEM.jpg')">6.779</td>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/MARTE IMAGEM.jpg')">-65°C</td>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/MARTE IMAGEM.jpg')">2</td>
+            </tr>
+
+            <tr>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/JUPITER.png')">Júpiter</td>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/JUPITER.png')">139.820</td>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/JUPITER.png')">-110°C</td>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/JUPITER.png')">95</td>
+            </tr>
+
+            <tr>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/SATURNO.png')">Saturno</td>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/SATURNO.png')">116.460</td>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/SATURNO.png')">-140°C</td>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/SATURNO.png')">146</td>
+            </tr>
+
+            <tr>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/URANO IMAGEM.jpg')">Urano</td>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/URANO IMAGEM.jpg')">50.724</td>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/URANO IMAGEM.jpg')">-195°C</td>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/URANO IMAGEM.jpg')">27</td>
+            </tr>
+
+            <tr>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/NETUNO IMAGEM.jpg')">Netuno</td>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/NETUNO IMAGEM.jpg')">49.244</td>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/NETUNO IMAGEM.jpg')">-200°C</td>
+                <td style="cursor:pointer;" onclick="mostrarPlaneta('../images/NETUNO IMAGEM.jpg')">14</td>
+            </tr>
+
+        </table>
+    </main>
+
+    <footer> © 2026 ClickSpace — Projeto Acadêmico 1º Semestre - Universidade Fumec</footer>
+    <script>
+
+        function abrirMenu() {
+            document.getElementById("sidebar").classList.toggle("active");
+        }
+
+
+        function mostrarPlaneta(img) {
+            const viewer = document.getElementById("viewer");
+            const imagem = document.getElementById("imgPlaneta");
+
+            imagem.src = img;
+            viewer.classList.add("active");
+        }
+
+        // fechar ao clicar fora
+        document.getElementById("viewer").onclick = function () {
+            this.classList.remove("active");
+        }
+
+    </script>
+</body>
+
+</html>
