@@ -1,6 +1,7 @@
 [  ] NOME DO PROJETO: SPACE CLICK
 
-[  ] LINK DA PUBLI.: ?
+[  ] LINK DA PUBLI.: https://spaceclickk.netlify.app/
+                     
 
 [v] PARTICIPANTES E PAPÉIS:
 ● João Vitor: Tech Lead
