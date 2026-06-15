@@ -6,7 +6,7 @@
 
 Uma plataforma educativa e interativa para explorar os planetas e corpos celestes do Sistema Solar.
 
-🚀 **Acesse o projeto:** https://spaceclick.github.io
+🚀 **Acesse o projeto:** https://spaceclickk.netlify.app/
 
 </div>
 
