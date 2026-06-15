@@ -8,7 +8,6 @@
 
     <link rel="stylesheet" href="../css/carrinho.css">
     <link rel="icon" href="../images/GALAXIA ICON.png"> 
-
 </head>
 
 <body>
@@ -16,6 +15,10 @@
     <h1>🛒 Carrinho Espacial</h1>
 
     <div id="lista"></div>
+
+    <div id="container-total" style="margin: 20px 0; font-size: 1.3rem; font-weight: bold; color: #fff;">
+        Total do Carrinho: <span id="valor-total" style="color: #00ff88;">R$ 0,00</span>
+    </div>
 
     <div class="acoes">
 
@@ -40,6 +43,9 @@
 
             let lista =
                 document.getElementById("lista");
+            
+            let valorTotalElemento = 
+                document.getElementById("valor-total");
 
             lista.innerHTML = "";
 
@@ -47,16 +53,24 @@
 
                 lista.innerHTML =
                     "<h2 class='carrinho-vazio'>Seu carrinho está vazio.</h2>";
-
+                
+                valorTotalElemento.innerText = "R$ 0,00"; 
                 return;
             }
 
+            let precoFixo = 150.00; 
+            let total = 0;
+
             carrinho.forEach((item, index) => {
+                
+                let nomeItem = item.nome || item; 
+
+                total += precoFixo; 
 
                 lista.innerHTML += `
                     <div class="item">
 
-                        <span>${item}</span>
+                        <span>${nomeItem} - R$ ${precoFixo.toFixed(2).replace('.', ',')}</span>
 
                         <button
                             class="remover"
@@ -67,6 +81,8 @@
                     </div>
                 `;
             });
+
+            valorTotalElemento.innerText = `R$ ${total.toFixed(2).replace('.', ',')}`;
         }
 
         function removerItem(index) {
