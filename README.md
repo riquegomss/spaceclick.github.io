@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌌 Sistema Solar
+# 🌌 SpaceClick
 
 ### Projeto Final de Introdução à Programação Web
 
